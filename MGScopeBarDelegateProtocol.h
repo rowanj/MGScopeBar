@@ -11,8 +11,8 @@
 
 // Selection modes for the buttons within a group.
 typedef enum _MGScopeBarGroupSelectionMode {
-    MGRadioSelectionMode         = 0,	// Exactly one item in the group will be selected at a time (no more, and no less).
-    MGMultipleSelectionMode      = 1	// Any number of items in the group (including none) may be selected at a time.
+    MGScopeBarGroupSelectionModeRadio         = 0,	// Exactly one item in the group will be selected at a time (no more, and no less).
+    MGScopeBarGroupSelectionModeMultiple      = 1	// Any number of items in the group (including none) may be selected at a time.
 } MGScopeBarGroupSelectionMode;
 
 

@@ -200,9 +200,9 @@
 				NSMutableArray *usedIdentifiers = [NSMutableArray arrayWithCapacity:[identifiers count]];
 				NSMutableArray *buttons = [NSMutableArray arrayWithCapacity:[identifiers count]];
 				MGScopeBarGroupSelectionMode selMode = [delegate scopeBar:self selectionModeForGroup:groupNum];
-				if (selMode != MGRadioSelectionMode && selMode != MGMultipleSelectionMode) {
+				if (selMode != MGScopeBarGroupSelectionModeRadio && selMode != MGScopeBarGroupSelectionModeMultiple) {
 					// Sanity check, since this is just an int.
-					selMode = MGRadioSelectionMode;
+					selMode = MGScopeBarGroupSelectionModeRadio;
 				}
 				NSMutableDictionary *groupInfo = [NSMutableDictionary dictionaryWithObjectsAndKeys:
 												  usedIdentifiers, GROUP_IDENTIFIERS, 
@@ -267,7 +267,7 @@
 				[groupInfo setObject:[NSNumber numberWithFloat:cumulativeWidth] forKey:GROUP_CUMULATIVE_WIDTH];
 				
 				// If this is a radio-mode group, select the first item automatically.
-				if (selMode == MGRadioSelectionMode) {
+				if (selMode == MGScopeBarGroupSelectionModeRadio) {
 					[self updateSelectedState:YES forItem:[identifiers objectAtIndex:0] inGroup:groupNum informDelegate:YES];
 				}
 			}
@@ -738,7 +738,7 @@
 	NSPopUpButton *popup = [[NSPopUpButton alloc] initWithFrame:popFrame pullsDown:NO];
 	
 	// Since we're not using the selected item's title, we need to specify a NSMenuItem for the title.
-	BOOL multiSelect = ([[group objectForKey:GROUP_SELECTION_MODE] intValue] == MGMultipleSelectionMode);
+	BOOL multiSelect = ([[group objectForKey:GROUP_SELECTION_MODE] intValue] == MGScopeBarGroupSelectionModeMultiple);
 	if (multiSelect) {
 		MGRecessedPopUpButtonCell *cell = [[MGRecessedPopUpButtonCell alloc] initTextCell:@"" pullsDown:NO];
 		[popup setCell:cell];
@@ -937,7 +937,7 @@
 			
 			// We found the group which this item belongs to. Obtain selection-mode and identifiers.
 			MGScopeBarGroupSelectionMode selMode = [[group objectForKey:GROUP_SELECTION_MODE] intValue];
-			BOOL radioMode = (selMode == MGRadioSelectionMode);
+			BOOL radioMode = (selMode == MGScopeBarGroupSelectionModeRadio);
 			
 			if (radioMode) {
 				// This is a radio-mode group. Ensure this item isn't already selected.

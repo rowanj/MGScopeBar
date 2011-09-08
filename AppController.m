@@ -47,7 +47,7 @@
 	[self.groups addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 							@"Search:", GROUP_LABEL, 
 							[NSNumber numberWithBool:NO], GROUP_SEPARATOR, 
-							[NSNumber numberWithInt:MGRadioSelectionMode], GROUP_SELECTION_MODE, // single selection group.
+							[NSNumber numberWithInt:MGScopeBarGroupSelectionModeRadio], GROUP_SELECTION_MODE, // single selection group.
 							items, GROUP_ITEMS, 
 							nil]];
 	
@@ -70,7 +70,7 @@
 	[self.groups addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 							// deliberately not specifying a label
 							[NSNumber numberWithBool:YES], GROUP_SEPARATOR, 
-							[NSNumber numberWithInt:MGMultipleSelectionMode], GROUP_SELECTION_MODE, // multiple selection group.
+							[NSNumber numberWithInt:MGScopeBarGroupSelectionModeMultiple], GROUP_SELECTION_MODE, // multiple selection group.
 							items, GROUP_ITEMS, 
 							nil]];
 	
@@ -89,7 +89,7 @@
 	[self.groups addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 							@"Kind:", GROUP_LABEL, 
 							[NSNumber numberWithBool:YES], GROUP_SEPARATOR, 
-							[NSNumber numberWithInt:MGRadioSelectionMode], GROUP_SELECTION_MODE, // single selection group.
+							[NSNumber numberWithInt:MGScopeBarGroupSelectionModeRadio], GROUP_SELECTION_MODE, // single selection group.
 							items, GROUP_ITEMS, 
 							nil]];
 	
