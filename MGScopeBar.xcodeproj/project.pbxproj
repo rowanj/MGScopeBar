@@ -11,6 +11,14 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AAE7857A1419184700A6955E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE785791419184700A6955E /* Cocoa.framework */; };
+		AAE785801419184700A6955E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAE7857E1419184700A6955E /* InfoPlist.strings */; };
+		AAE785841419184700A6955E /* MGScopeBarFramework.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE785831419184700A6955E /* MGScopeBarFramework.m */; };
+		AAE78589141918A100A6955E /* MGScopeBar.h in Headers */ = {isa = PBXBuildFile; fileRef = C9FB61170E8FF8810019B961 /* MGScopeBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE7858A141918A100A6955E /* MGScopeBarDelegateProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C9FB61190E8FF8810019B961 /* MGScopeBarDelegateProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE7858B141918A100A6955E /* MGRecessedPopUpButtonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C95B43CE0EB73CE3008EE468 /* MGRecessedPopUpButtonCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAE7858C141918B100A6955E /* MGScopeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FB61180E8FF8810019B961 /* MGScopeBar.m */; };
+		AAE7858D141918B100A6955E /* MGRecessedPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B43CF0EB73CE3008EE468 /* MGRecessedPopUpButtonCell.m */; };
 		C95B43D00EB73CE3008EE468 /* MGRecessedPopUpButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C95B43CF0EB73CE3008EE468 /* MGRecessedPopUpButtonCell.m */; };
 		C9FB61150E8FF8360019B961 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FB61140E8FF8360019B961 /* AppController.m */; };
 		C9FB611A0E8FF8810019B961 /* MGScopeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C9FB61180E8FF8810019B961 /* MGScopeBar.m */; };
@@ -27,6 +35,13 @@
 		32CA4F630368D1EE00C91783 /* MGScopeBar_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGScopeBar_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MGScopeBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGScopeBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE785781419184700A6955E /* MGScopeBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MGScopeBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE785791419184700A6955E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AAE7857D1419184700A6955E /* MGScopeBarFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MGScopeBarFramework-Info.plist"; sourceTree = "<group>"; };
+		AAE7857F1419184700A6955E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AAE785811419184700A6955E /* MGScopeBarFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGScopeBarFramework-Prefix.pch"; sourceTree = "<group>"; };
+		AAE785821419184700A6955E /* MGScopeBarFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.objj.h; path = MGScopeBarFramework.h; sourceTree = "<group>"; };
+		AAE785831419184700A6955E /* MGScopeBarFramework.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGScopeBarFramework.m; sourceTree = "<group>"; };
 		C95B43CE0EB73CE3008EE468 /* MGRecessedPopUpButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGRecessedPopUpButtonCell.h; sourceTree = "<group>"; };
 		C95B43CF0EB73CE3008EE468 /* MGRecessedPopUpButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGRecessedPopUpButtonCell.m; sourceTree = "<group>"; };
 		C9FB61130E8FF8360019B961 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -45,6 +60,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAE785741419184700A6955E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE7857A1419184700A6955E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* MGScopeBar.app */,
+				AAE785781419184700A6955E /* MGScopeBar.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +120,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				AAE7857B1419184700A6955E /* MGScopeBarFramework */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -125,9 +150,30 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				AAE785791419184700A6955E /* Cocoa.framework */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAE7857B1419184700A6955E /* MGScopeBarFramework */ = {
+			isa = PBXGroup;
+			children = (
+				AAE785821419184700A6955E /* MGScopeBarFramework.h */,
+				AAE785831419184700A6955E /* MGScopeBarFramework.m */,
+				AAE7857C1419184700A6955E /* Supporting Files */,
+			);
+			path = MGScopeBarFramework;
+			sourceTree = "<group>";
+		};
+		AAE7857C1419184700A6955E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAE7857D1419184700A6955E /* MGScopeBarFramework-Info.plist */,
+				AAE7857E1419184700A6955E /* InfoPlist.strings */,
+				AAE785811419184700A6955E /* MGScopeBarFramework-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C9FB61160E8FF8590019B961 /* MGScopeBar */ = {
@@ -143,6 +189,19 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AAE785751419184700A6955E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE78589141918A100A6955E /* MGScopeBar.h in Headers */,
+				AAE7858A141918A100A6955E /* MGScopeBarDelegateProtocol.h in Headers */,
+				AAE7858B141918A100A6955E /* MGRecessedPopUpButtonCell.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		8D1107260486CEB800E47090 /* MGScopeBar */ = {
@@ -163,6 +222,24 @@
 			productReference = 8D1107320486CEB800E47090 /* MGScopeBar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AAE785771419184700A6955E /* MGScopeBar.framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAE785871419184700A6955E /* Build configuration list for PBXNativeTarget "MGScopeBar.framework" */;
+			buildPhases = (
+				AAE785731419184700A6955E /* Sources */,
+				AAE785741419184700A6955E /* Frameworks */,
+				AAE785751419184700A6955E /* Headers */,
+				AAE785761419184700A6955E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MGScopeBar.framework;
+			productName = MGScopeBarFramework;
+			productReference = AAE785781419184700A6955E /* MGScopeBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +257,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* MGScopeBar */,
+				AAE785771419184700A6955E /* MGScopeBar.framework */,
 			);
 		};
 /* End PBXProject section */
@@ -194,6 +272,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AAE785761419184700A6955E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE785801419184700A6955E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -205,6 +291,16 @@
 				C9FB61150E8FF8360019B961 /* AppController.m in Sources */,
 				C9FB611A0E8FF8810019B961 /* MGScopeBar.m in Sources */,
 				C95B43D00EB73CE3008EE468 /* MGRecessedPopUpButtonCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAE785731419184700A6955E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE7858C141918B100A6955E /* MGScopeBar.m in Sources */,
+				AAE7858D141918B100A6955E /* MGRecessedPopUpButtonCell.m in Sources */,
+				AAE785841419184700A6955E /* MGScopeBarFramework.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,9 +323,74 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
+		AAE7857E1419184700A6955E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAE7857F1419184700A6955E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AAE785851419184700A6955E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MGScopeBarFramework/MGScopeBarFramework-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "MGScopeBarFramework/MGScopeBarFramework-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = MGScopeBar;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		AAE785861419184700A6955E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MGScopeBarFramework/MGScopeBarFramework-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "MGScopeBarFramework/MGScopeBarFramework-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = MGScopeBar;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -285,6 +446,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AAE785871419184700A6955E /* Build configuration list for PBXNativeTarget "MGScopeBar.framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE785851419184700A6955E /* Debug */,
+				AAE785861419184700A6955E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MGScopeBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
