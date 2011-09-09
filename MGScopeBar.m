@@ -716,7 +716,7 @@
 }
 
 
-- (NSMenuItem *)menuItemForItem:(NSString *)identifier inGroup:(int)groupNumber 
+- (NSMenuItem *)menuItemForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber 
 					  withTitle:(NSString *)title image:(NSImage *)image
 {
 	NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:title action:@selector(scopeButtonClicked:) keyEquivalent:@""];
@@ -786,7 +786,7 @@
 }
 
 
-- (void)setControl:(NSObject *)control forIdentifier:(NSString *)identifier inGroup:(int)groupNumber
+- (void)setControl:(NSObject *)control forIdentifier:(NSString *)identifier inGroup:(NSInteger)groupNumber
 {
 	if (!_identifiers) {
 		_identifiers = [[NSMutableDictionary alloc] initWithCapacity:0];
@@ -798,10 +798,10 @@
 		[_identifiers setObject:identArray forKey:identifier];
 	}
 	
-	int count = [identArray count];
+	NSUInteger count = [identArray count];
 	if (groupNumber >= count) {
 		// Pad identArray with nulls if appropriate, so this control lies at index groupNumber.
-		for (int i = count; i < groupNumber; i++) {
+		for (NSInteger i = count; i < groupNumber; i++) {
 			[identArray addObject:[NSNull null]];
 		}
 		[identArray addObject:control];
@@ -825,7 +825,7 @@
 		NSPopUpButton *popup = [group objectForKey:GROUP_POPUP_BUTTON];
 		if (popup) {
 			NSArray *groupSelection = [_selectedItems objectAtIndex:groupNumber];
-			int numSelected = [groupSelection count];
+			NSUInteger numSelected = [groupSelection count];
 			if (numSelected == 0) {
 				// No items selected.
 				[popup setTitle:POPUP_TITLE_EMPTY_SELECTION];
@@ -905,7 +905,7 @@
 	NSButton *button = (NSButton *)sender;
 	BOOL menuMode = [sender isKindOfClass:[NSMenuItem class]];
 	NSString *identifier = [((menuMode) ? sender : [sender cell]) representedObject];
-	int groupNumber = [sender tag];
+	NSInteger groupNumber = [sender tag];
 	BOOL nowSelected = YES;
 	if (menuMode) {
 		// MenuItem. Ensure item has appropriate state.
@@ -1014,7 +1014,11 @@
 {
 	return [[_selectedItems copy] autorelease];
 }
-
+- (BOOL) isItemSelectedWithIdentifier:(NSString*)identifier inGroup:(NSInteger)groupNumber;
+{
+    NSArray *identifiers = [_selectedItems objectAtIndex:groupNumber];
+    return [identifiers containsObject:identifier];
+}
 
 - (void)setDelegate:(id)newDelegate
 {
