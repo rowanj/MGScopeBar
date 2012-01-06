@@ -922,7 +922,7 @@
 #pragma mark Accessors and properties
 
 
-- (void)setSelected:(BOOL)selected forItem:(NSString *)identifier inGroup:(int)groupNumber
+- (void)setSelected:(BOOL)selected forItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 {
 	// Change state of other items in group appropriately, informing delegate if possible.
 	// First we find the appropriate group-info for the item's identifier.
