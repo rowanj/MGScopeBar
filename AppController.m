@@ -194,7 +194,7 @@
 
 
 - (void)scopeBar:(MGScopeBar *)theScopeBar selectedStateChanged:(BOOL)selected 
-		 forItem:(NSString *)identifier inGroup:(int)groupNumber
+		 forItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 {
 	// Display some text showing what just happened.
 	NSString *displayString = [NSString stringWithFormat:@"\"%@\" %@ in group %d.", 
