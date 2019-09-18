@@ -118,25 +118,25 @@
 #pragma mark MGScopeBarDelegate methods
 
 
-- (int)numberOfGroupsInScopeBar:(MGScopeBar *)theScopeBar
+- (NSInteger)numberOfGroupsInScopeBar:(MGScopeBar *)theScopeBar
 {
 	return [self.groups count];
 }
 
 
-- (NSArray *)scopeBar:(MGScopeBar *)theScopeBar itemIdentifiersForGroup:(int)groupNumber
+- (NSArray *)scopeBar:(MGScopeBar *)theScopeBar itemIdentifiersForGroup:(NSInteger)groupNumber
 {
 	return [[self.groups objectAtIndex:groupNumber] valueForKeyPath:[NSString stringWithFormat:@"%@.%@", GROUP_ITEMS, ITEM_IDENTIFIER]];
 }
 
 
-- (NSString *)scopeBar:(MGScopeBar *)theScopeBar labelForGroup:(int)groupNumber
+- (NSString *)scopeBar:(MGScopeBar *)theScopeBar labelForGroup:(NSInteger)groupNumber
 {
 	return [[self.groups objectAtIndex:groupNumber] objectForKey:GROUP_LABEL]; // might be nil, which is fine (nil means no label).
 }
 
 
-- (NSString *)scopeBar:(MGScopeBar *)theScopeBar titleOfItem:(NSString *)identifier inGroup:(int)groupNumber
+- (NSString *)scopeBar:(MGScopeBar *)theScopeBar titleOfItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 {
 	NSArray *items = [[self.groups objectAtIndex:groupNumber] objectForKey:GROUP_ITEMS];
 	if (items) {
@@ -154,20 +154,20 @@
 }
 
 
-- (MGScopeBarGroupSelectionMode)scopeBar:(MGScopeBar *)theScopeBar selectionModeForGroup:(int)groupNumber
+- (MGScopeBarGroupSelectionMode)scopeBar:(MGScopeBar *)theScopeBar selectionModeForGroup:(NSInteger)groupNumber
 {
 	return [[[self.groups objectAtIndex:groupNumber] objectForKey:GROUP_SELECTION_MODE] intValue];
 }
 
 
-- (BOOL)scopeBar:(MGScopeBar *)theScopeBar showSeparatorBeforeGroup:(int)groupNumber
+- (BOOL)scopeBar:(MGScopeBar *)theScopeBar showSeparatorBeforeGroup:(NSInteger)groupNumber
 {
 	// Optional method. If not implemented, all groups except the first will have a separator before them.
 	return [[[self.groups objectAtIndex:groupNumber] objectForKey:GROUP_SEPARATOR] boolValue];
 }
 
 
-- (NSImage *)scopeBar:(MGScopeBar *)scopeBar imageForItem:(NSString *)identifier inGroup:(int)groupNumber
+- (NSImage *)scopeBar:(MGScopeBar *)scopeBar imageForItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 {
 	// Optional method. If not implemented (or if you return nil), items will not have an image.
 	if (groupNumber == 0) {
@@ -197,10 +197,10 @@
 		 forItem:(NSString *)identifier inGroup:(NSInteger)groupNumber
 {
 	// Display some text showing what just happened.
-	NSString *displayString = [NSString stringWithFormat:@"\"%@\" %@ in group %d.", 
+	NSString *displayString = [NSString stringWithFormat:@"\"%@\" %@ in group %@.",
 							   [self scopeBar:theScopeBar titleOfItem:identifier inGroup:groupNumber], 
 							   (selected) ? @"selected" : @"deselected", 
-							   groupNumber];
+							   @(groupNumber)];
 	[labelField setStringValue:displayString];
 	//NSLog(@"%@", displayString);
 }
